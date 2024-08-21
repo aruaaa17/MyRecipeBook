@@ -12,7 +12,7 @@ import SwiftUI
 struct MyRecipeBookApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecipeCategoryListScreen()
         }
     }
 }

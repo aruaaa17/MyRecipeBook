@@ -10,6 +10,6 @@ import Foundation
 
 struct Constants {
     struct Urls {
-        static let recipeCategoriesURL = URL(string: "www.themealdb.com/api/json/v1/1/categories.php")!
+        static let recipeCategoriesURL = URL(string: "http://www.themealdb.com/api/json/v1/1/categories.php")!
     }
 }
