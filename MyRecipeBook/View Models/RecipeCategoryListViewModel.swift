@@ -20,9 +20,8 @@ class RecipeCategoryListViewModel: ObservableObject {
             }
             
             self.recipeCategories = recipeCategoriesResponse.categories.map(RecipeCategoryViewModel.init)
-            
         } catch {
-            print(error)
+            print("RecipeCategoryListViewModel - func populateCategories", error)
         }
     }
 }

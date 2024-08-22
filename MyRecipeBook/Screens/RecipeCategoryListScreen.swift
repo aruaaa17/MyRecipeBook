@@ -19,7 +19,7 @@ struct RecipeCategoryListScreen: View {
                 .task {
                     await model.populateCategories()
                 }
-                .navigationTitle("Recipes")
+                .navigationTitle("Category")
         }
     }
 }
