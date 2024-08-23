@@ -1,5 +1,5 @@
 //
-//  Recipe.swift
+//  RecipeDetailResponse.swift
 //  MyRecipeBook
 //
 //  Created by April (Huaiyu) Zhang on 8/21/24.
@@ -9,10 +9,10 @@
 import Foundation
 
 struct RecipeResponse: Decodable {
-    let recipes: [Recipe]
+    let recipes: [RecipeDetail]
 }
 
-struct Recipe: Identifiable, Decodable {
+struct RecipeDetail: Identifiable, Decodable {
     let id: String
     let title: String
     let imageURL: String

@@ -46,23 +46,3 @@ struct RecipeByCategoryViewModel {
     }
 }
 
-struct RecipeViewModel {
-    
-    private let recipe: Recipe
-    
-    init(_ recipe: Recipe) {
-        self.recipe = recipe
-    }
-    
-    var id: String {
-        recipe.id
-    }
-    
-    var title: String {
-        recipe.title
-    }
-    
-    var imageURL: URL? {
-        URL(string: recipe.imageURL)
-    }
-}
