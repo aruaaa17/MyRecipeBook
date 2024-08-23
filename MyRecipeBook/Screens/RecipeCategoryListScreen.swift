@@ -19,7 +19,6 @@ struct RecipeCategoryListScreen: View {
                 .task {
                     await model.populateCategories()
                 }
-                .navigationTitle("Category")
         }
     }
 }

@@ -15,7 +15,7 @@ struct RecipeCategoryListView: View {
     
     var body: some View {
         List(categories) { category in 
-            NavigationLink(destination: RecipeListScreen(recipeCategory: category)) {
+            NavigationLink(destination: RecipeListScreen(recipeCategory: category).navigationTitle(category.title)) {
                 RecipeCategoryCellView(recipeCategory: category)
             }
         }.listStyle(.plain)

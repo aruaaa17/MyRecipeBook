@@ -21,7 +21,6 @@ struct RecipeListScreen: View {
                 print("Debug: Starting to populate recipes")
                 await recipeListVM.populateRecipesByCategory(name: recipeCategory.title)
             }
-            .navigationTitle(recipeCategory.title)
             .onAppear {
                 print("Debug: RecipeListScreen appeared, ViewModel initialized")
             }

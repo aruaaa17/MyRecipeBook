@@ -22,6 +22,7 @@ struct RecipeCategoryCellView: View {
             } placeholder: {
                         ProgressView()
             }
+            .navigationTitle("Category")
             Text(recipeCategory.title)
         }
     }
