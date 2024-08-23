@@ -20,7 +20,7 @@ class RecipeListViewModel: ObservableObject {
                 return try? JSONDecoder().decode(RecipeByCategoryResponse.self, from: data)
             }
             self.recipeByCategory = recipeResponse.meals.map(RecipeByCategoryViewModel.init)
-            print("Fetched recipes: \(self.recipeByCategory)")
+            print("Debug: Fetched recipes for category: \(name)")
         } catch {
             print("Debug: RecipeListViewModel - populateRecipesByCategory func", error)
         }

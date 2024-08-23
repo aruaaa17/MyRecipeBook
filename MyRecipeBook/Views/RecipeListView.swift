@@ -14,7 +14,9 @@ struct RecipeListView: View {
     
     var body: some View {
         List(recipeByCategory, id: \.id) { recipe in
-            RecipeCellView(recipe: recipe)
+            NavigationLink(destination: RecipeDetailScreen(recipeId: recipe.id)) {
+                RecipeCellView(recipe: recipe)
+            }
         }
     }
 }

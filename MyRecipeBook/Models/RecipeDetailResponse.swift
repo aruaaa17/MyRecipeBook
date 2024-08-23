@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct RecipeResponse: Decodable {
-    let recipes: [RecipeDetail]
+struct RecipeDetailResponse: Decodable {
+    let meals: [RecipeDetail]
 }
 
 struct RecipeDetail: Identifiable, Decodable {

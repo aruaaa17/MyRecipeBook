@@ -15,5 +15,9 @@ struct Constants {
         static func recipeByCategoriesNameURL(_ name: String) -> URL {
             return URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=\(name)")!
         }
+        
+        static func recipeById(_ id: String) -> URL {
+            return URL(string: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(id)")!
+        }
     }
 }
