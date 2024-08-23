@@ -40,16 +40,27 @@ struct RecipeDetailScreen: View {
             }
             .frame(height: 300)
             .clipped()
+            
+            VStack(alignment: .leading, spacing: 15) {
+                 Text("Ingredients")
+                     .font(.headline)
+                 
+                 ForEach(recipeDetailVM.ingredientMeasurePairs, id: \.0) { ingredient, measure in
+                     Text("‣ \(measure) \(ingredient)")
+                 }
+                
+                Spacer().frame(height: 15)
+                
+                VStack(alignment: .leading, spacing: 15) {
+                    if !recipeDetailVM.instructions.isEmpty {
+                        Text("Instructions")
+                            .font(.headline)
 
-            VStack(alignment: .leading, spacing: 30) {
-                if !recipeDetailVM.instructions.isEmpty {
-                    Text("Instructions")
-                        .font(.headline)
-
-                    Text(recipeDetailVM.instructions)
+                        Text(recipeDetailVM.instructions)
+                    }
                 }
-            }
-            .padding(.horizontal)
+             }
+             .padding(.horizontal)
         }
         .ignoresSafeArea(.container, edges: .top)
         .task {

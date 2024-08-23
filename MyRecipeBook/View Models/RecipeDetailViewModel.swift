@@ -14,6 +14,7 @@ class RecipeDetailViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var imageURL: URL?
     @Published var instructions: String = ""
+    @Published var ingredientMeasurePairs: [(String, String)] = []
     
     func populateRecipeDetail(id:String) async {
         do {
@@ -25,6 +26,7 @@ class RecipeDetailViewModel: ObservableObject {
                 self.title = recipeDetail.title
                 self.imageURL = URL(string: recipeDetail.imageURL)
                 self.instructions = recipeDetail.instructions
+                self.ingredientMeasurePairs = recipeDetail.ingredientMeasurePairs
                 print("Debug: Recipe details populated successfully")
             } else {
                 print("Debug: No meals found in response")
